@@ -5,7 +5,7 @@ require(rhandsontable)
 ui <- shinyUI(fluidPage(
   
   titlePanel("Race car dynamics"), br(),
-
+  
   sidebarLayout(
     sidebarPanel(id = "sidebar",
                  fluidRow(

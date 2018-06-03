@@ -1,5 +1,4 @@
 
-
 server <- shinyServer(function(input, output, session){
 
   air_density <- reactive({
@@ -155,8 +154,7 @@ server <- shinyServer(function(input, output, session){
       LLT_dist <- 0
     }
     
-    out <- list(LAT_f_total = LAT_f_total, LAT_r_total = LAT_r_total,  LLT_dist = LLT_dist, lateral_accel = lateral_accel) 
-    
+    out <- list(LAT_f_total = LAT_f_total, LAT_r_total = LAT_r_total,  LLT_dist = LLT_dist, lateral_accel = lateral_accel)
   })
   
   aerodynamic_force <- reactive({
@@ -277,8 +275,6 @@ server <- shinyServer(function(input, output, session){
     
     out <- list(ride_height = ride_height, real_h = real_h, delta_h = delta_h, real_w = real_w, delta_w = delta_w)
   })
-  
-  
   
   damping <- reactive({
     
@@ -546,6 +542,7 @@ server <- shinyServer(function(input, output, session){
   
   
   ### RIDE HEIGHT ###
+  
   output$tbl_front_height <- renderRHandsontable({
     
     res <- heights_N_weights()
